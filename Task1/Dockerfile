@@ -1,6 +1,7 @@
 FROM python:3.8
 
 COPY . .
+WORKDIR Task1
 
 RUN apt-get update && apt-get upgrade -y
 
