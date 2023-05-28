@@ -32,4 +32,4 @@ jobs:
           context: .
           file: ./Task1/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/clockbox:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/test_dataset:latest
