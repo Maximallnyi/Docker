@@ -26,5 +26,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           
       - name: Build and push
-        run:
-          docker build ./Task1 -t test_ga
+        uses: docker/build-push-action@v4
+        with:
+          file: ./Task1/Dockerfile
+          push: true
+          tags: user/app:latest
