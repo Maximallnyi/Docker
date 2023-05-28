@@ -8,6 +8,4 @@ RUN apt-get install python3-pip -y
 
 RUN pip3 install numpy pandas
 
-ENTRYPOINT ["python3"]
-
-CMD ["main.py"]
+CMD ["python3","-u","main.py"]
