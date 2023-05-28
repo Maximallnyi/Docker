@@ -11,7 +11,7 @@ jobs:
   build_matrix:
     strategy:
       matrix:
-        os: [ubuntu-latest,windows-latest]
+        os: [ubuntu-latest]
     runs-on: ${{matrix.os}}
     steps:
       - name: Set up QEMU
@@ -26,8 +26,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           
       - name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          file: ./Task1/Dockerfile
-          push: true
-          tags: user/app:latest
+        run:
+          docker build ./Task1 -t test_ga
