@@ -28,6 +28,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          file: ./Task1/Dockerfile
+          file: Dockerfile
           push: true
           tags: user/app:latest
